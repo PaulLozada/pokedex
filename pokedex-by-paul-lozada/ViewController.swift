@@ -128,6 +128,17 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return CGSizeMake(105, 105)
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+       
+        var poke : Pokemon!
+        
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
+    }
    
     //MARK: SearchBar Delegates
     
@@ -152,5 +163,16 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         self.view.endEditing(true)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
+        } else {
+            
+        }
+    }
 }
 
