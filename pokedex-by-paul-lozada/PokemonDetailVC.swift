@@ -29,6 +29,8 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var currentEvoImage: UIImageView!
     @IBOutlet weak var nextEvoImage: UIImageView!
     @IBOutlet weak var evoLabel: UILabel!
+    @IBOutlet weak var attackLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,8 @@ class PokemonDetailVC: UIViewController {
         defenseLabel.text = pokemon.defense
         heightLabel.text = pokemon.height
         pokedexLabel.text = "\(pokemon.pokedexId)"
+        attackLabel.text = pokemon.attack
+        weightLabel.text = pokemon.weight
         
         if pokemon.nextEvolutionText == "" {
             evoLabel.text = "No Evolutions"
