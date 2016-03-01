@@ -11,7 +11,7 @@ import UIKit
 class PokeCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbImg : UIImageView!
-    @IBOutlet weak var nameLbl : UILabel!
+    @IBOutlet weak var nameLbl : UILabel! 
     
     var pokemon : Pokemon!
     
