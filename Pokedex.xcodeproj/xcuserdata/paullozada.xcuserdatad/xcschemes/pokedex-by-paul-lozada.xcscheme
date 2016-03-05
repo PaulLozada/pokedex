@@ -11,14 +11,13 @@
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
-            buildForAnalyzing = "YES"
-            hideIssues = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "335ED6BF1C83E39B008FE7AD"
                BuildableName = "pokedex-by-paul-lozada.app"
                BlueprintName = "pokedex-by-paul-lozada"
-               ReferencedContainer = "container:pokedex-by-paul-lozada.xcodeproj">
+               ReferencedContainer = "container:Pokedex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +35,7 @@
                BlueprintIdentifier = "335ED6D31C83E39B008FE7AD"
                BuildableName = "pokedex-by-paul-lozadaTests.xctest"
                BlueprintName = "pokedex-by-paul-lozadaTests"
-               ReferencedContainer = "container:pokedex-by-paul-lozada.xcodeproj">
+               ReferencedContainer = "container:Pokedex.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -46,7 +45,7 @@
                BlueprintIdentifier = "335ED6DE1C83E39B008FE7AD"
                BuildableName = "pokedex-by-paul-lozadaUITests.xctest"
                BlueprintName = "pokedex-by-paul-lozadaUITests"
-               ReferencedContainer = "container:pokedex-by-paul-lozada.xcodeproj">
+               ReferencedContainer = "container:Pokedex.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,7 +55,7 @@
             BlueprintIdentifier = "335ED6BF1C83E39B008FE7AD"
             BuildableName = "pokedex-by-paul-lozada.app"
             BlueprintName = "pokedex-by-paul-lozada"
-            ReferencedContainer = "container:pokedex-by-paul-lozada.xcodeproj">
+            ReferencedContainer = "container:Pokedex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,7 +78,7 @@
             BlueprintIdentifier = "335ED6BF1C83E39B008FE7AD"
             BuildableName = "pokedex-by-paul-lozada.app"
             BlueprintName = "pokedex-by-paul-lozada"
-            ReferencedContainer = "container:pokedex-by-paul-lozada.xcodeproj">
+            ReferencedContainer = "container:Pokedex.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,7 +97,7 @@
             BlueprintIdentifier = "335ED6BF1C83E39B008FE7AD"
             BuildableName = "pokedex-by-paul-lozada.app"
             BlueprintName = "pokedex-by-paul-lozada"
-            ReferencedContainer = "container:pokedex-by-paul-lozada.xcodeproj">
+            ReferencedContainer = "container:Pokedex.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

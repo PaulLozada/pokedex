@@ -299,7 +299,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 335ED6BB1C83E39B008FE7AD /* Build configuration list for PBXProject "pokedex-by-paul-lozada" */;
+			buildConfigurationList = 335ED6BB1C83E39B008FE7AD /* Build configuration list for PBXProject "Pokedex" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -558,6 +558,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Paul.Lozada.pokedex-by-paul-lozada";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -570,6 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Paul.Lozada.pokedex-by-paul-lozada";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -622,7 +624,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		335ED6BB1C83E39B008FE7AD /* Build configuration list for PBXProject "pokedex-by-paul-lozada" */ = {
+		335ED6BB1C83E39B008FE7AD /* Build configuration list for PBXProject "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				335ED6E61C83E39B008FE7AD /* Debug */,

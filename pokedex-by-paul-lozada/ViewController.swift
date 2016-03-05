@@ -150,6 +150,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
+             collection.reloadData( )
         } else {
             inSearchMode = true
             let lower = searchBar.text!.lowercaseString

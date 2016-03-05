@@ -112,7 +112,6 @@ class Pokemon {
             if let dict = response.result.value as? [String: AnyObject] {
                 if let weight = dict["weight"] as? String {
                     self._weight = weight
-                    print(weight)
                 }
                 if let height = dict["height"] as? String {
                     self._height = height
@@ -137,7 +136,6 @@ class Pokemon {
                             }
                         }
                     }
-                    print(self._type)
                 }
                 
                 if let descArr = dict["descriptions"] as? [[String:String]] where descArr.count > 0 {
@@ -147,11 +145,10 @@ class Pokemon {
                             
                             if let information = response.result.value {
                                 self._description = information["description"] as? String
-                                print(self._description)
                             }
                             completed ( )
                             
-                            if let evolutions = dict["evolutions"] as? [[String: AnyObject]] {
+                            if let evolutions = dict["evolutions"] as? [[String: AnyObject]] where evolutions.count > 0 {
                                 if let to = evolutions[0]["to"] as? String {
                                     
                                     //Can't suport mega pokemon right now
@@ -162,7 +159,6 @@ class Pokemon {
                                             let num = newStr.stringByReplacingOccurrencesOfString("/", withString: "")
                                             self._nextEvolutionId = num
                                             self._nextEvolutionText = to
-                                            print(self.nextEvolutionText)
                                             if let lvl = evolutions[0]["level"] as? Int {
                                                 self._nextEvolutionLevel = "\(lvl)"
                                             }

@@ -18,6 +18,15 @@ class PokemonDetailVC: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func segmentedControlPressed(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.descriptionLbl.hidden = false
+            print("BIO")
+        } else if sender.selectedSegmentIndex == 1 {
+            hide( )
+        }
+    }
+    
     //MARK: IBOutlets
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
@@ -31,12 +40,22 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var evoLabel: UILabel!
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var evoImageStackView: UIStackView!
+    @IBOutlet weak var typeStackView: UIStackView!
+    @IBOutlet weak var defenseStackView: UIStackView!
+    @IBOutlet weak var heightStackView: UIStackView!
+    @IBOutlet weak var weightStackView: UIStackView!
+    @IBOutlet weak var baseAttackStackView: UIStackView!
+    @IBOutlet weak var pokedexStackView: UIStackView!
+    @IBOutlet weak var redViewSeperator: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
         nameLbl.text = pokemon.name.capitalizedString
-        var img = UIImage(named: "\(pokemon.pokedexId)")
+        let img = UIImage(named: "\(pokemon.pokedexId)")
         currentEvoImage.image = img
         nextEvoImage.image = UIImage(named: pokemon.nextEvolutionId)
         mainImg.image = img
@@ -48,7 +67,7 @@ class PokemonDetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     func updateUI ( ) {
         descriptionLbl.text = pokemon.descr
         typeLabel.text = pokemon.type
@@ -74,7 +93,29 @@ class PokemonDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func hide ( ) {
+        mainImg.hidden = true
+        descriptionLbl.hidden = true
+        typeLabel.hidden = true
+        defenseLabel.hidden = true
+        heightLabel.hidden = true
+        pokedexLabel.hidden = true
+        currentEvoImage.hidden = true
+        nextEvoImage.hidden = true
+        evoLabel.hidden = true
+        attackLabel.hidden = true
+        weightLabel.hidden = true
+        evoImageStackView.hidden = true
+        typeStackView.hidden = true
+        defenseStackView.hidden = true
+        heightStackView.hidden = true
+        weightStackView.hidden = true
+        baseAttackStackView.hidden = true
+        pokedexStackView.hidden = true
+        redViewSeperator.hidden = true
+        lineView.hidden = true
+        
+    }
     /*
     // MARK: - Navigation
 
