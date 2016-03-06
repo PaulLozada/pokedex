@@ -22,6 +22,7 @@ class Pokemon {
     private var _pokemonUrl : String!
     private var _nextEvolutionId : String!
     private var _nextEvolutionLevel : String!
+    private var _abilities : [String]!
     
     var name : String {
         return _name
@@ -95,6 +96,15 @@ class Pokemon {
         }
     }
     
+    var abilities : [String] {
+        get{
+            if _abilities == nil {
+                _abilities = [""]
+            }
+            return _abilities
+        }
+    }
+    
     
 
     
@@ -104,15 +114,35 @@ class Pokemon {
         _pokemonUrl = "\(BASE_URL)\(URL_POKEMON)\(self._pokedexId)/"
     }
     
+    func downloadMoveDetails ( ) {
+        let url = NSURL(string: "\(BASE_URL)\(URI_ABILITIES)\(pokedexId)")!
+        
+        Alamofire.request(.GET, url).responseJSON { response in
+//            print(response.result.value)
+        }
+        
+//        print(url)
+    }
+    
+    
     func downloadPokemonDetails (completed : DownloadComplete) {
         let url = NSURL(string: _pokemonUrl)!
 
         Alamofire.request(.GET, url).responseJSON { response in
             
+    
+            
             if let dict = response.result.value as? [String: AnyObject] {
                 if let weight = dict["weight"] as? String {
                     self._weight = weight
                 }
+                
+                if let abil = dict["abilities"] as? [[String: AnyObject]] {
+                    print(abil)
+                } else {
+                    print("nothing found")
+                }
+            
                 if let height = dict["height"] as? String {
                     self._height = height
                 }
@@ -124,7 +154,7 @@ class Pokemon {
                 if let defense = dict["defense"] as? Int {
                     self._defense = "\(defense)"
                 }
-             
+                
                 if let types = dict["types"] as? [[String:String]] where types.count > 0  {
                     if let type = types[0]["name"] {
                         self._type = type.capitalizedString

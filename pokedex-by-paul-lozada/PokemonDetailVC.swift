@@ -21,9 +21,10 @@ class PokemonDetailVC: UIViewController {
     @IBAction func segmentedControlPressed(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             self.descriptionLbl.hidden = false
-            print("BIO")
         } else if sender.selectedSegmentIndex == 1 {
             hide( )
+            self.descriptionLbl.hidden = false
+            self.descriptionLbl.text = pokemon.abilities[0]
         }
     }
     
@@ -60,6 +61,9 @@ class PokemonDetailVC: UIViewController {
         nextEvoImage.image = UIImage(named: pokemon.nextEvolutionId)
         mainImg.image = img
         
+        
+        pokemon.downloadMoveDetails()
+        
         pokemon.downloadPokemonDetails {
             //this will be called after the download is done
             self.updateUI()
@@ -83,7 +87,6 @@ class PokemonDetailVC: UIViewController {
         } else {
             nextEvoImage.hidden = false
             nextEvoImage.image = UIImage(named: pokemon.nextEvolutionId)
-            print(pokemon.nextEvolutionText)
             evoLabel.text = pokemon.nextEvolutionText
             
         }
