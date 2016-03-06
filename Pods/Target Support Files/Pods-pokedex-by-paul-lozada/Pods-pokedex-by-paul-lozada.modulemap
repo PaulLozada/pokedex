@@ -1,0 +1,6 @@
+framework module Pods_pokedex_by_paul_lozada {
+  umbrella header "Pods-pokedex-by-paul-lozada-umbrella.h"
+
+  export *
+  module * { export * }
+}
